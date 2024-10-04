@@ -1,0 +1,202 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: large;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+body {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+/* Navbar styling */
+nav {
+  background-color: #1a1a2e; /* Dark blue */
+  color: white;
+  display: grid;
+  grid-template-columns: 30% 60%;
+  column-gap: 10%;
+  padding: 1% 5%;
+}
+
+nav .array-inputs {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  align-items: center;
+  padding: 5% 0%;
+}
+
+nav .array-inputs #a_size,
+nav .array-inputs #a_speed {
+  padding: 5% 0%;
+  width: 90%;
+}
+
+nav .array-inputs #a_generate {
+  background-color: #e94560; /* Vibrant red */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: large;
+  transition: background-color 0.3s ease;
+}
+
+nav .array-inputs #a_generate:hover {
+  cursor: pointer;
+  background-color: #ff6b81; /* Lighter red on hover */
+}
+
+/* Header right section */
+nav .header_right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+nav .header_right .nav-heading {
+  font-size: 3rem;
+  padding: 10px 0;
+  color: #f5f5f5;
+}
+
+nav .header_right .algos {
+  display: grid;
+  grid-template-columns: repeat(6, 16.66667%);
+  place-content: center;
+  gap: 10px;
+}
+
+nav .header_right .algos button {
+  background-color: #0f3460; /* Deep blue */
+  border: none;
+  color: white;
+  padding: 12px 0;
+  font-size: large;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+nav .header_right .algos button:hover {
+  background-color: #16213e; /* Slightly darker blue */
+  cursor: pointer;
+}
+
+nav .header_right .algos .butt_selected {
+  background-color: #00adb5; /* Bright cyan for selected buttons */
+  color: white;
+}
+
+section {
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  padding: 2% 5%;
+}
+
+section .Complexity_Containers {
+  margin-top: 10%;
+}
+
+section .Complexity_Containers .Pair_Definitions {
+  margin-top: 10%;
+}
+
+section .Complexity_Containers .Pair_Definitions p {
+  display: inline;
+}
+
+section .Complexity_Containers .Pair_Definitions p.Sub_Heading {
+  font-size: medium;
+  text-transform: none;
+  color: #1a1a2e;
+}
+
+section #Info_Cont1,
+section #Info_Cont2 {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section #Info_Cont1 h3,
+section #Info_Cont2 h3 {
+  text-decoration: underline;
+  color: #16213e;
+  text-align: center;
+}
+
+section #array_container {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hide {
+  display: none;
+}
+
+/* Footer styling */
+footer {
+  background-color: #1a1a2e;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: medium;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Responsive design */
+@media (max-width: 480px) /* Mobiles */
+{
+  section {
+    grid-template-columns: 1fr;
+    padding: 5% 2%;
+  }
+
+  nav {
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+  }
+
+  nav .header_right {
+    align-items: flex-start;
+  }
+
+  nav .array-inputs {
+    grid-template-columns: 1fr;
+  }
+
+  nav .header_right .algos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 481px) and (max-width: 1250px) /* Tablets */
+{
+  section {
+    grid-template-columns: 20% 60% 20%;
+    padding: 5% 3%;
+  }
+
+  nav .header_right .algos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1251px) /* Laptops and up */
+{
+  section {
+    grid-template-columns: 20% 60% 20%;
+  }
+}
